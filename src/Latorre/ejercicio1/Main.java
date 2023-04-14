@@ -1,6 +1,8 @@
 package Latorre.ejercicio1;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -16,10 +18,9 @@ public class Main {
         int cantidad = BuscLetraString.contarLetra(palabra, letra);
         System.out.println("La letra '" + letra + "' aparece " + cantidad + " veces en la palabra '" + palabra + "'");
 
-       
 
         // Ejemplo de uso del método sumarNumerosMayoresQueX
-        int[] numeros = { 1, 2, 3, 4, 5 };
+        int[] numeros = {1, 2, 3, 4, 5};
         int x = 2;
         int suma = BuscLetraString.sumarNumerosMayoresQueX(numeros, x);
         System.out.println("La suma de los números mayores que " + x + " es " + suma);
@@ -37,7 +38,7 @@ public class Main {
         System.out.println("Mensaje descifrado: " + mensajeDescifrado);
 
 
-        //
+        //automaticacion del pasaje de parametros
         int a, b, c;
         boolean ascendente;
         char orden = 'n';
@@ -73,6 +74,12 @@ public class Main {
         System.out.println("Los números ordenados son: " + Arrays.toString(numerosOrdenados));
 
 
+        //
+
+        String rutaArchivo = "D:/Adrian/programacion fullstack/curso java/ejClase3Latorre/numeros.txt";
+        int sumas=SumaNumerosArchivo.sumarNumeros(rutaArchivo);
+
+        System.out.println("La suma de los numeros del archivo es: "+sumas);
 
 
     }
